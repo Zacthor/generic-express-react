@@ -8,6 +8,10 @@
     "build": "webpack",
     "lint": "functionhappy | snazzy"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zacthor/generic-express-react.git"
+  },
   "author": "zbknight@hotmail.com",
   "license": "MIT",
   "devDependencies": {
