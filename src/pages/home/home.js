@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function App({
+export default function Home({
   name,
   nameInput,
   setNameInput,
@@ -13,4 +14,11 @@ export default function App({
       <button onClick={saveNameInput}>save</button>
     </div>
   );
+}
+
+Home.propTypes = {
+  name: PropTypes.string.isRequired,
+  nameInput: PropTypes.string,
+  setNameInput: PropTypes.func.isRequired,
+  saveNameInput: PropTypes.func.isRequired,
 }
