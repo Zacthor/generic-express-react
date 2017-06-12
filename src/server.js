@@ -10,7 +10,7 @@ server.use('/assets', express.static('assets'));
 
 const finisher = (data, res, App) => {
   const {templateName, initialState, title} = data;
-  const body = renderToString(<App {...{templateName, initialState}} />);
+  const body = renderToString(<App {...initialState} />);
   // TODO: Immutable maybe?
   res.send(template(Object.assign({}, data, {body})));
 };
