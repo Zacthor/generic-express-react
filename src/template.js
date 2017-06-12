@@ -1,5 +1,5 @@
 export default (data) => {
-  const { body, title } = data
+  const { body, title } = data;
   return `
     <!DOCTYPE html>
     <html>

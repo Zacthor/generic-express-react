@@ -8,12 +8,11 @@ import template from './template';
 import pages from './pages';
 import { getReducers, doInitSetup } from './helpers';
 
-
 const server = express();
 server.use('/public', express.static('public'));
 
 const finisher = (data, res, App) => {
-  const {templateName, initialState, title, actionType} = data;
+  const {initialState, actionType} = data;
 
   let store = createStore(getReducers(pages), {}, applyMiddleware(thunk));
   const butter = doInitSetup({ initialState, store, actionType });

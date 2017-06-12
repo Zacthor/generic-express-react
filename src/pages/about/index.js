@@ -3,5 +3,5 @@ import router from './aboutRouter';
 
 export default {
   router,
-  App: About,
+  App: About
 };

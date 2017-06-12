@@ -5,5 +5,5 @@ import reducer from './homeReducer';
 export default {
   router,
   reducer,
-  App,
+  App
 };

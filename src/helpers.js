@@ -29,5 +29,5 @@ export function mapDispatchToPropsHelper(actions) {
       };
       return acc;
     }, {});
-  }
+  };
 }

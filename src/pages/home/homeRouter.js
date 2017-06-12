@@ -11,8 +11,8 @@ export default {
         templateName: 'home',
         initialState: data,
         title: 'Home',
-        actionType: INIT,
+        actionType: INIT
       });
-    })
+    });
   }
 };

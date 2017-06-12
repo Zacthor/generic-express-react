@@ -4,7 +4,7 @@ export default {
     finish({
       templateName: 'about',
       initialState: { name: 'stuff' },
-      title: 'About',
+      title: 'About'
     });
   }
 };

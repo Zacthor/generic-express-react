@@ -5,7 +5,7 @@ const { INIT, SET_NAME_INPUT, SAVE_NAME } = REDUCER_TYPES;
 
 export default function home(state = Immutable.Map(), action) {
   const {type, payload} = action;
-  switch(type) {
+  switch (type) {
     case INIT: {
       const { name } = payload;
       state = state.set('name', name);

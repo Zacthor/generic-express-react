@@ -5,7 +5,7 @@ export default function Home({
   name,
   nameInput,
   setNameInput,
-  saveNameInput,
+  saveNameInput
 }) {
   return (
     <div>
@@ -20,5 +20,5 @@ Home.propTypes = {
   name: PropTypes.string.isRequired,
   nameInput: PropTypes.string,
   setNameInput: PropTypes.func.isRequired,
-  saveNameInput: PropTypes.func.isRequired,
-}
+  saveNameInput: PropTypes.func.isRequired
+};
