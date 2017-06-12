@@ -4,22 +4,16 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import pages from './pages';
-import {getReducers} from './helpers';
+import { getReducers, doInitSetup } from './helpers';
 
 const appState = window['__APP_INITIAL_STATE__'];
 const { initialState, actionType } = appState;
 const { App } = pages[appState.templateName];
 
 let store = createStore(getReducers(pages), {}, applyMiddleware(thunk));
-let butter = {};
-if (actionType) {
-  store.dispatch({ type: actionType, payload: initialState });
-} else {
-  butter = initialState;
-}
+let butter = doInitSetup({initialState, actionType, store});
 render(
   <Provider store={store}>
-    {/*TODO: move initialState out when not needed.*/}
     <App {...butter} />
   </Provider>
   , document.getElementById('root'));

@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { renderToString } from 'react-dom/server';
 import template from './template';
 import pages from './pages';
-import {getReducers} from './helpers';
+import { getReducers, doInitSetup } from './helpers';
 
 
 const server = express();
@@ -16,13 +16,10 @@ const finisher = (data, res, App) => {
   const {templateName, initialState, title, actionType} = data;
 
   let store = createStore(getReducers(pages), {}, applyMiddleware(thunk));
-  if (actionType) {
-    store.dispatch({ type: actionType, payload: initialState });
-  }
+  const butter = doInitSetup({ initialState, store, actionType });
   const body = renderToString(
     <Provider store={store}>
-      {/*TODO: move initialState out when not needed.*/}
-      <App />
+      <App {...butter}/>
     </Provider>
   );
   // TODO: Immutable maybe?
