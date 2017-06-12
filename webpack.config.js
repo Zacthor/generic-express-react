@@ -49,7 +49,7 @@ module.exports = [
     }
   },
   {
-    entry: './src/app/browser.js',
+    entry: './src/browser.js',
     output: {
       path: './dist/assets',
       publicPath: '/',

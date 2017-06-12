@@ -1,3 +1,5 @@
+import Home from './home';
+
 //mimics asyncAction
 function asyncAction() {
   return new Promise((resolve) => {
@@ -5,15 +7,20 @@ function asyncAction() {
   })
 }
 
-export default {
+const router = {
   path: '/',
   loader: (req, finish) => {
     asyncAction().then((data) => {
       finish({
-        templateName: 'App',
+        templateName: 'home',
         initialState: data,
         title: 'Home',
       });
     })
   }
-}
+};
+
+export default {
+  router,
+  App: Home,
+};
