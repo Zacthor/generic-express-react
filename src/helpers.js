@@ -19,3 +19,13 @@ export function doInitSetup({initialState, actionType, store}) {
   }
   return butter;
 }
+
+export function mapDispatchToPropsHelper(actions) {
+  return (dispatch) => {
+    return Object.keys(actions).reduce((acc, actionKey) => {
+      const action = actions[actionKey];
+      acc[actionKey] = () => dispatch(action());
+      return acc;
+    }, {});
+  }
+}
