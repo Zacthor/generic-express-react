@@ -1,2 +1,3 @@
 import home from './home';
-export default { home };
+import about from './about';
+export default { home, about };

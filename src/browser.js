@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import pages from './pages';
 
-const initialState = window['__APP_INITIAL_STATE__'];
-const { App } = pages[initialState.templateName];
+const appState = window['__APP_INITIAL_STATE__'];
+const { initialState } = appState;
+const { App } = pages[appState.templateName];
 render(<App {...initialState} />, document.getElementById('root'));

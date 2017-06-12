@@ -5,7 +5,7 @@ export default (data) => {
     <html>
       <head>
         <title>${title}</title>
-        <link rel="stylesheet" href="/assets/index.css" />
+        <link rel="stylesheet" href="/public/index.css" />
       </head>
 
       <body>
