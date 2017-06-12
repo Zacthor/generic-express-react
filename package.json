@@ -6,6 +6,8 @@
   "scripts": {
     "start": "webpack && cd dist && node server",
     "build": "webpack",
+    "reset": "rm -rf dist/ && npm run start",
+    "hard-reset": "rm -rf node_modules/ && rm -rf dist/ && npm install && npm run start",
     "lint": "functionhappy | snazzy"
   },
   "repository": {
@@ -36,6 +38,7 @@
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
     "react-redux": "^5.0.5",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
   }
 }

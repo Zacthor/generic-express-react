@@ -1,3 +1,8 @@
+import { asyncAction } from './homeServices';
+import { REDUCER_TYPES } from './homeConstants';
+
+const { INIT } = REDUCER_TYPES;
+
 export default {
   path: '/',
   loader: (req, finish) => {
@@ -6,13 +11,8 @@ export default {
         templateName: 'home',
         initialState: data,
         title: 'Home',
+        actionType: INIT,
       });
     })
   }
 };
-
-function asyncAction() {
-  return new Promise((resolve) => {
-    setTimeout(()=>resolve({name: 'hello world'}), 1000);
-  })
-}

@@ -52,7 +52,7 @@ module.exports = [
     entry: './src/browser.js',
     output: {
       path: './dist/public',
-      publicPath: '/public',
+      publicPath: '/',
       filename: 'bundle.js'
     },
     plugins: clientLoaders.concat([

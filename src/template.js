@@ -16,7 +16,7 @@ export default (data) => {
         </script>
       </body>
 
-      <script src="/assets/bundle.js"></script>
+      <script src="/public/bundle.js"></script>
     </html>
   `;
 };
