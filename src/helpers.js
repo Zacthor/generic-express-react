@@ -24,7 +24,9 @@ export function mapDispatchToPropsHelper(actions) {
   return (dispatch) => {
     return Object.keys(actions).reduce((acc, actionKey) => {
       const action = actions[actionKey];
-      acc[actionKey] = () => dispatch(action());
+      acc[actionKey] = (...args) => {
+        dispatch(action(...args));
+      };
       return acc;
     }, {});
   }

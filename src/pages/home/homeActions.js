@@ -1,10 +1,16 @@
 import { REDUCER_TYPES } from './homeConstants';
 
-const { SET_NAME_INPUT } = REDUCER_TYPES;
+const { SET_NAME_INPUT, SAVE_NAME } = REDUCER_TYPES;
 
-export function setName(name) {
+export function setNameInput({target}) {
   return {
     type: SET_NAME_INPUT,
-    payload: name,
+    payload: target.value,
+  }
+}
+
+export function saveNameInput() {
+  return {
+    type: SAVE_NAME,
   }
 }

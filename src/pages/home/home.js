@@ -1,10 +1,16 @@
 import React from 'react';
 
-export default function App(crap) {
-  const { name } = crap;
+export default function App({
+  name,
+  nameInput,
+  setNameInput,
+  saveNameInput,
+}) {
   return (
     <div>
-      <h1 data-find="asshole">{name}</h1>
+      <h1>{name}</h1>
+      <input type="text" value={nameInput} onChange={setNameInput} />
+      <button onClick={saveNameInput}>save</button>
     </div>
   );
 }
