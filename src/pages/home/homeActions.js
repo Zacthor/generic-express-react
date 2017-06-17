@@ -1,6 +1,11 @@
 import { REDUCER_TYPES } from './homeConstants';
 
-const { SET_NAME_INPUT, SAVE_NAME } = REDUCER_TYPES;
+const {
+  SET_NAME_INPUT,
+  SAVE_NAME,
+  PREP_SIDE_EFFECT,
+  CAUSE_SIDE_EFFECT
+} = REDUCER_TYPES;
 
 export function setNameInput({target}) {
   return {
@@ -13,4 +18,16 @@ export function saveNameInput() {
   return {
     type: SAVE_NAME
   };
+}
+
+export function prepSideEffect() {
+  return {
+    type: PREP_SIDE_EFFECT
+  };
+}
+
+export function causeSideEffectError() {
+  return {
+    type: CAUSE_SIDE_EFFECT
+  }
 }

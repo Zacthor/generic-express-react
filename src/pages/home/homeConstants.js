@@ -1,5 +1,7 @@
 export const REDUCER_TYPES = {
   INIT: 'home/init',
   SET_NAME_INPUT: 'home/SET_NAME_INPUT',
-  SAVE_NAME: 'home/SAVE_NAME'
+  SAVE_NAME: 'home/SAVE_NAME',
+  CAUSE_SIDE_EFFECT: 'home/CAUSE_SIDE_EFFECT',
+  PREP_SIDE_EFFECT: 'home/PREP_SIDE_EFFECT'
 };
